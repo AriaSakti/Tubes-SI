@@ -1,0 +1,51 @@
+penjelasan pada tabel relasi Resto dan Cafe Rakyats
+
+1.tb_pengguna untuk menyimpan data pelanggan seperti nama,alamat,nomer telepon dan email
+  tb_pengguna di relasikan dengan tb_pemesanan,tb_penilaian_restoran,tb_penilaian_coffeshop
+  karena pada tabel tersebut data pengguna di perlukan untuk mengetahui informasi pemesanan,
+  dan melengkap informasi penilaian pada restoran/coffeshop
+
+2.tb_pemesanan menyimpan berbagai data dari id_makanan,id_minuman,tanggal_pesanan,jumlah,total_harga
+  id_pengguna,id_coffeshop,id_restoran,id_driver,id_metode pembayaran.pada tabel ini di relasikan
+  ke beberapa tabel untuk menampilkan informasi pesanan pelanggan dengan detail contoh:
+  dari makanan dan minuman yg dipesan,tanggal pesanan jumlah pesanan,total harga pesanan,
+  nama pemesan,nama cafe/resto yg di pilih,driver yg mengartar pesanan,opsi pembayaran yg dipilih pelanggan
+  
+3.tb_driver untuk menyimpan data driver pengirim seperti nama driver,alamat,telepon,email,status driver
+  tabel ini di relasikan ke tabel pemesanan untuk memberikan informasi driver yg mengantar pesanan ke
+  lokasi pengguna
+
+4.tb_metode_pembayaran untuk menyimpan data metode pembayaran seperti nama_metodepembayaran,status
+  tabel ini di relasikan dengan tb_pemesanan untuk memberikan informasi metode pembayaran apa yg di gunakan pengguna
+
+5.tb_makanan untuk menyimpan data dari nama_makanan,deskripsi makanan,harga
+  tabel ini di relasikan dengan tb_restoran dan tb_coffeshop untuk memberikan informasi
+  makanan/minuman tersedia di cafe/resto ini
+
+6.tb_minuman untuk menyimpan data dari nama_minuman,deskripsi minuman,harga
+  tabel ini di relasikan dengan tb_restoran dan tb_coffeshop untuk memberikan informasi
+  makanan/minuman tersedia di cafe/resto ini
+
+7.tb_restoran untuk menyimpan data nama_restoran,alamat_restoran,telepon_restoran
+  tabel ini di relasikan dengan tb_pemesanan,tb_makanan,tb_minuman,tb_penilaian_restoran
+  untuk memberikan informasi nama,alamat,nomer telepon restoran yg bersangkutan saat melakukan
+  pemesanan,penilaian
+
+8.tb_coffeshop untuk menyimpan data nama_coffeshop,alamat_coffeshop,telepon_coffeshop
+  tabel ini di relasikan dengan tb_pemesanan,tb_makanan,tb_minuman,tb_penilaian_coffeshop
+  untuk memberikan informasi nama,alamat,nomer telepon coffeshop yg bersangkutan saat melakukan
+  pemesanan,penilaian
+
+9.tb_penilaian_restoran untuk menyimpan data id_restoran,id_kriteria_restoran,id_pengguna,nilai
+  tabel ini di relasikan dengan tb_restoran,tb_kriteria_restoran,tb_pengguna, karena saat melakukan
+  penilaian membutukan informasi dari restoran,krireria restoran yg di nilai dan nama pengguna yg menilai
+
+10.tb_penilaian_coffeshop untuk menyimpan informasi id_coffeshop,id_kriteria_coffeshop,id_pengguna,nilai
+  tabel ini di relasikan dengan tb_coffeshop,tb_kriteria_coffeshop,tb_pengguna, karena saat melakukan
+  penilaian membutukan informasi dari coffeshop,krireria coffeshop yg di nilai dan nama pengguna yg menilai
+
+11.tb_kriteria_restoran untuk menyimpan data nama kriteria,tabel ini di relasikan dengan tb_penilaian_restoran
+   karena untuk melakukan penilaian di tb_penilaian_restoran memerlukan informasi kriteria restoran yang akan dinilai
+
+12.tb_kriteria_coffeshop untuk menyimpan data nama kriteria,tabel ini di relasikan dengan tb_penilaian_coffeshop 
+   karena untuk melakukan penilaian di tb_penilaian_coffeshop  memerlukan informasi kriteria coffeshop yang akan dinilai
